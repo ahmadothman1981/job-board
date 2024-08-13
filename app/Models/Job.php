@@ -31,7 +31,7 @@ class Job extends Model
     public function hasUserApplied(Authenticatable|User|int $user): bool
     {
         return $this->where('id',$this->id)
-                    ->whereHas('jopApplications',fn($query)=>$query
+                    ->whereHas('jobApplications',fn($query)=>$query
                     ->where('user_id','=',$user->id ?? $user))->exists();
     }
 
