@@ -30,6 +30,14 @@
           @endauth
         </ul>
       </nav>
+
+      @if(session('success'))
+  <div role="alert" class="my-8 rounded-md boarder-l-4 boarder-green-500 bg-green-50 p-4 text-green-700 opaccity-70">
+    <p class="font-bold">Success!</p>
+     <p>{{session('success')}}</p>
+  </div>
+
+      @endif
       {{ $slot }}
     </body>
 </html>
