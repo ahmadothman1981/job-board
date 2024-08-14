@@ -32,9 +32,18 @@
       </nav>
 
       @if(session('success'))
-  <div role="alert" class="my-8 rounded-md boarder-l-4 boarder-green-500 bg-green-50 p-4 text-green-700 opaccity-70">
+  <div role="alert" class="my-8 rounded-md boarder-l-4 boarder-green-300 bg-green-100 p-4 text-green-700 opaccity-75">
     <p class="font-bold">Success!</p>
      <p>{{session('success')}}</p>
+  </div>
+
+      @endif
+
+      
+      @if(session('error'))
+  <div role="alert" class="my-8 rounded-md boarder-l-4 boarder-red-300 bg-red-100 p-4 text-red-700 opaccity-75">
+    <p class="font-bold">Error!</p>
+     <p>{{session('error')}}</p>
   </div>
 
       @endif
