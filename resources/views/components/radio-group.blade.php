@@ -11,4 +11,9 @@
         <span class="ml-2">{{$label}}</span>
     </label>
 @endforeach
+
+     @error($name)
+            <div class="w-full text-xs text-red-500">{{ $message }}</div>
+
+     @enderror
 </div>
